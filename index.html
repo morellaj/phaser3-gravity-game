@@ -1,0 +1,53 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Falling objects simulator" />
+  <meta name="author" content="Alex Morelli" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="viewport" content="width = 450" />
+  <title>Falling objects simulator - gravity, drag, and elasticity</title>
+  <link href="new.css" rel="stylesheet" media="screen" />
+
+
+  <style type="text/css">
+    body {
+      margin: 0;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="settings">
+    <ul id="settings-list">
+      <div class="wrapper">
+        <li><label for="color">Color: <input type="text" id="color" value="Red"></input></label></li>
+        <p> Color or next ball created. </p>
+      </div>
+      <div class="wrapper">
+        <li><label for="gravity">Gravity: <input type="number" id="gravity" min="0" max="1000" value="100"></input></label></li>
+        <p> Gravitational force of the environment, causing the balls to accelerate down. Range 0 - 1000. </p>
+      </div>
+      <div class="wrapper">
+        <li><label for="drag">Drag: <input type="number" id="drag" min="0" max="100" value="0"></input></label></li>
+        <p id="drag-p"> Friction of the surrounding environmente that causes moving objects to slow down. Empty space has no drag, air has some drag, and water has high drag. Range 0 - 100. </p>
+      </div>
+      <div class="wrapper">
+        <li><button id="reset-objects" class="btn btn-default setting-button">Reset Objects</button> </li>
+        <p> Remove all the balls. </p>
+      </div>
+      <div class="wrapper">
+        <li><button id="reset-game" class="btn btn-default setting-button">Reset Game</button> </li>
+        <p id="reset-game-p"> Return to the start screen. </p>
+      </div>
+    </ul>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script type="text/javascript" src="constants.js"></script>
+  <script type="text/javascript" src="functions.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
